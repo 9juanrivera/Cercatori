@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="icon" href="img/favicon.ico"/>
     <title>Cercatori</title>
     <link rel="stylesheet" href="css/index.css">
@@ -12,7 +13,6 @@
     <header>
         
         <img src="img/cercatori.png" alt="Cercatori logo image" class="logo_img" onclick="location.reload();">
-        
         <p class="logo-subtitle">Biblioteca <br> Virtual</p>
 
         <nav>
@@ -31,61 +31,48 @@
 
     </header>
 
-    <main>
+    <main class="contenedor">
 
-        <div class="welcome">
-            <h1 class="welcome_title">Bienvenido a Cercatori</h1>
-            <div class="team-divider"></div>
-        </div>
+    <section class="login-box">
+      <h2>Acceder</h2>
 
-        <section class="hero">
-            <div class="carousel">
-                <div class="carousel-track" id="track">
+      <label>Nombre de usuario o correo electrónico</label>
+      <input type="text">
 
-                    <div class="carousel-slide">
-                        <img src="img/diome.jpg" alt="Biblioteca">
-                        <div class="overlay">
-                            <p class="quote">"Tomese una Aguila busquese una prepago y a culiarrrrr"</p>
-                        </div>
-                    </div>
+      <label>Contraseña *</label>
 
-                    <div class="carousel-slide">
-                        <img src="library.jpg" alt="Biblioteca">
-                        <div class="overlay">
-                            <p class="quote">"Los libros son espejos: solo te ves en ellos si ya estás dentro."</p>
-                        </div>
-                    </div>
+      <div class="password-box">
+        <input type="password">
+        <span class="icono"></span/>
+      </div>
 
-                    <div class="carousel-slide">
-                        <img src="library.jpg" alt="Biblioteca">
-                        <div class="overlay">
-                            <p class="quote">"Leer es vivir mil vidas antes de acabar la tuya."</p>
-                        </div>
-                    </div>
+      <button>INGRESAR</button>
+    </section>
 
-                </div>
+    <section class="register-box">
+      <h2>Registrarse</h2>
 
-                <button class="carousel-btn prev" onclick="move(-1)">&#8249;</button>
-                <button class="carousel-btn next" onclick="move(1)">&#8250;</button>
-            </div>
+      <label>Dirección de correo electrónico *</label>
+      <input type="email">
 
-            <div class="h_text">
-                <h2 class="h_titulo">Accede y reserva libros que necesites de la biblioteca.</h2>
-                <p class="h_subtitulo">Gracias por visitar nuestra pagina.</p>
-                <a href="materias.html" class="h_mat">Explorar materias</a>
-            </div>
-        </section>
+      <p>
+        Se enviará un enlace a tu dirección de correo electrónico
+        para establecer una contraseña.
+      </p>
 
-    </main>
+      <button>REGISTRARSE</button>
+    </section>
 
-        <footer class="footer">
+  </main>
+
+  <footer class="footer">
         <div class="footer_contenido">
 
             <div class="footer_col">
                 <p class="footer_titulo">Líneas de Atención</p>
-                <p class="footer_cositas">Correo Cercatori</p>
+                <p class="footer_label">Correo Cercatori</p>
                 <a href="mailto:contacto@cercatori.edu.co" class="footer_link">contacto@cercatori.edu.co</a>
-                <p class="footer_cositas">Línea de Soporte</p>
+                <p class="footer_label">Línea de Soporte</p>
                 <p class="footer_texto">300 123 4567</p>
             </div>
 
@@ -123,7 +110,7 @@
         </div>
     </footer>
 
-
     <script src="js/index.js"></script>
+    
 </body>
 </html>
