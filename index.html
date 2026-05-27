@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        
+        <img src="img/cercatori.png" alt="Cercatori logo image" class="logo_img" onclick="location.reload();">
+        
+        <p class="logo-subtitle">Biblioteca <br> Virtual</p>
+
+        <nav>
+            <a href="index.html" class="active">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="contactanos.html" >Contáctanos</a>
+            <a href="materias.html">Materias</a>
+            <a href="mi_espacio.html" >Mi Espacio</a>
+        </nav>
+
+        <div class="header-icons">
+            <i class="ti ti-search"></i>
+            <i class="ti ti-bell"></i>
+            <i class="ti ti-user-circle"></i>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="welcome">
+            <h1 class="welcome_title">Bienvenido a Cercatori</h1>
+            <div class="team-divider"></div>
+        </div>
+
+        <section class="hero">
+            <div class="carousel">
+                <div class="carousel-track" id="track">
+
+                    <div class="carousel-slide">
+                        <img src="img/diome.jpg" alt="Biblioteca">
+                        <div class="overlay">
+                            <p class="quote">"Tomese una Aguila busquese una prepago y a culiarrrrr"</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="library.jpg" alt="Biblioteca">
+                        <div class="overlay">
+                            <p class="quote">"Los libros son espejos: solo te ves en ellos si ya estás dentro."</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img src="library.jpg" alt="Biblioteca">
+                        <div class="overlay">
+                            <p class="quote">"Leer es vivir mil vidas antes de acabar la tuya."</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-btn prev" onclick="move(-1)">&#8249;</button>
+                <button class="carousel-btn next" onclick="move(1)">&#8250;</button>
+            </div>
+
+            <div class="h_text">
+                <h2 class="h_titulo">Accede y reserva libros que necesites de la biblioteca.</h2>
+                <p class="h_subtitulo">Gracias por visitar nuestra pagina.</p>
+                <a href="materias.html" class="h_mat">Explorar materias</a>
+            </div>
+        </section>
+
+    </main>
+
+        <footer class="footer">
+        <div class="footer_contenido">
+
+            <div class="footer_col">
+                <p class="footer_titulo">Líneas de Atención</p>
+                <p class="footer_cositas">Correo Cercatori</p>
+                <a href="mailto:contacto@cercatori.edu.co" class="footer_link">contacto@cercatori.edu.co</a>
+                <p class="footer_cositas">Línea de Soporte</p>
+                <p class="footer_texto">300 123 4567</p>
+            </div>
+
+            <div class="footer_divider"></div>
+
+            <div class="footer_col">
+                <p class="footer_titulo">Conócenos</p>
+                <a href="nosotros.html" class="footer_link">Quiénes somos</a>
+                <a href="contactanos.html" class="footer_link">Contacto</a>
+                <a href="materias.html" class="footer_link">Materias</a>
+            </div>
+
+            <div class="footer_divider"></div>
+
+            <div class="footer_col">
+                <p class="footer_titulo">Políticas</p>
+                <a href="#" class="footer_link">Política de privacidad</a>
+                <a href="#" class="footer_link">Términos y condiciones</a>
+            </div>
+
+            <div class="footer_divider"></div>
+
+            <div class="footer_col">
+                <p class="footer_titulo">Nuestras Redes</p>
+                <div class="footer_redes">
+                    <a href="https://instagram.com/juanrestrepo423" target="_blank" class="footer_red"><i class="ti ti-brand-instagram"></i></a>
+                    <a href="https://instagram.com/lorej128" target="_blank" class="footer_red"><i class="ti ti-brand-instagram"></i></a>
+                    <a href="https://instagram.com/salo_hdzz" target="_blank" class="footer_red"><i class="ti ti-brand-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer_copy">
+            <p>© 2026 Cercatori. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>
