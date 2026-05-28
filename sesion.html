@@ -12,8 +12,13 @@
 <body>
     <header>
         
-        <img src="img/cercatori.png" alt="Cercatori logo image" class="logo_img" onclick="location.reload();">
-        <p class="logo-subtitle">Biblioteca <br> Virtual</p>
+        <div class="logo_wrapper">
+
+            <img src="img/cercatori.png" alt="Cercatori logo image" class="logo_img" onclick="location.reload();">
+             
+            <span class="logo-subtitle">Biblioteca <br> Virtual</span>
+    
+        </div>
 
         <nav>
             <a href="index.html" class="active">Inicio</a>
@@ -31,39 +36,41 @@
 
     </header>
 
-    <main class="contenedor">
+    <main class="sesion_main">
+        <div class="sesion_contenedor">
 
-    <section class="login-box">
-      <h2>Acceder</h2>
+            <section class="login-box">
+                <h2>Acceder</h2>
+                <div class="sesion_divider"></div>
 
-      <label>Nombre de usuario o correo electrónico</label>
-      <input type="text">
+                <label>Usuario o correo</label>
+                <input type="text" placeholder="tu@correo.com">
 
-      <label>Contraseña *</label>
+                <label>Contraseña</label>
+                <div class="password-box">
+                    <input type="password" placeholder="••••••••">
+                    <span class="icono ti ti-eye"></span>
+                </div>
 
-      <div class="password-box">
-        <input type="password">
-        <span class="icono"></span/>
-      </div>
+                <button>Ingresar</button>
+            </section>
 
-      <button>INGRESAR</button>
-    </section>
+            <div class="sesion_separador"></div>
 
-    <section class="register-box">
-      <h2>Registrarse</h2>
+            <section class="register-box">
+                <h2>Registrarse</h2>
+                <div class="sesion_divider"></div>
 
-      <label>Dirección de correo electrónico *</label>
-      <input type="email">
+                <label>Correo electrónico</label>
+                <input type="email" placeholder="tu@correo.com">
 
-      <p>
-        Se enviará un enlace a tu dirección de correo electrónico
-        para establecer una contraseña.
-      </p>
+                <p>Se enviará un enlace a tu correo para establecer una contraseña.</p>
 
-      <button>REGISTRARSE</button>
-    </section>
+                <button class="btn_registro">Registrarse</button>
+            </section>
 
-  </main>
+        </div>
+    </main>
 
   <footer class="footer">
         <div class="footer_contenido">
@@ -71,9 +78,9 @@
             <div class="footer_col">
                 <p class="footer_titulo">Líneas de Atención</p>
                 <p class="footer_label">Correo Cercatori</p>
-                <a href="mailto:contacto@cercatori.edu.co" class="footer_link">contacto@cercatori.edu.co</a>
+                <a href="contactanos.html" class="footer_link">BibliotecaCercatori@gmail.com</a>
                 <p class="footer_label">Línea de Soporte</p>
-                <p class="footer_texto">300 123 4567</p>
+                <p class="footer_texto">300 122 1229</p>
             </div>
 
             <div class="footer_divider"></div>

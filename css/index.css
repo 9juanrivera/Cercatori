@@ -22,14 +22,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 32px 8%;
     background: var(--hefoo);
+}
+
+
+.logo_wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
 }
 
 .logo_img {
     width: 165px;
     height: 90px;
-    margin-left: -80px;
 }
 
 .logo_img:hover {
@@ -41,7 +48,6 @@ header {
     color: #ffffffbf;
     font-size: 17px;
     letter-spacing: 2.5px;
-    margin-left: -40px;
     font-weight: 600;
 }
 
@@ -562,105 +568,150 @@ body {
 
 
 /* =========================================== zona sesion ========================================== */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: white;
-}
-
-
-.contenedor{
-    width: 90%;
-    margin: 80px auto;
+.sesion_main {
     display: flex;
-    justify-content: space-between;
-    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 130px);
+    padding: 2rem 5%;
+}
+
+.sesion_contenedor {
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid #13310b;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(19, 49, 11, 0.18), inset 0 1px 0 rgba(255,255,255,0.10);
+    overflow: hidden;
+    max-width: 1100px;
+    width: 100%;
 }
 
 .login-box,
-.register-box{
-    width: 50%;
+.register-box {
+    flex: 1;
+    padding: 4rem 4rem;
+    display: flex;
+    flex-direction: column;
 }
 
-
-h2{
-    font-size: 45px;
-    margin-bottom: 30px;
-    color: #222;
+.sesion_separador {
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, #13310b55, transparent);
+    flex-shrink: 0;
 }
 
+.sesion_divider {
+    width: 36px;
+    height: 2px;
+    background: rgb(6, 156, 51);
+    margin-bottom: 1.5rem;
+}
 
-label{
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--hefoo);
+    margin-bottom: 0.4rem;
+}
+
+label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(20, 50, 20, 0.65);
+    font-weight: 500;
+    margin-top: 1.2rem;
+    margin-bottom: 0.35rem;
     display: block;
-    margin-bottom: 10px;
-    color: #888;
-    font-size: 20px;
 }
 
-input{
+input {
     width: 100%;
-    height: 55px;
+    height: auto;
     border: none;
-    border-radius: 12px;
-    background-color: #d9d9d9;
-    margin-bottom: 30px;
-    padding: 0 15px;
-    font-size: 18px;
+    border-bottom: 1px solid #D3D1C7;
+    border-radius: 0;
+    background: transparent;
+    padding: 10px 0;
+    font-size: 1rem;
+    color: var(--hefoo);
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+    margin-bottom: 0;
 }
 
-.password-box{
+input:focus {
+    border-bottom-color: var(--espacio);
+}
+
+.password-box {
     position: relative;
 }
 
-.icono{
+.icono {
     position: absolute;
-    right: 20px;
-    top: 15px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-
-p{
-    color: #777;
+    right: 4px;
+    top: 8px;
     font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 30px;
-}
-
-button{
-    background-color: #6f776f;
-    color: black;
-    border: none;
-    padding: 14px 35px;
-    border-radius: 30px;
-    font-size: 22px;
-    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    color: rgba(13,46,22,0.45);
 }
 
-button:hover{
-    opacity: 0.8;
+p {
+    font-size: 14px;
+    color: rgba(13, 46, 22, 0.55);
+    line-height: 1.7;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-weight: 300;
 }
 
-@media(max-width: 900px){
+button {
+    margin-top: 2.5rem;
+    align-self: flex-start;
+    background: var(--hefoo);
+    color: #7ee8a2;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    font-family: inherit;
+}
 
-    .contenedor{
+button:hover {
+    background: var(--espacio);
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .sesion_contenedor {
         flex-direction: column;
     }
-
-    .login-box,
-    .register-box{
+    .sesion_separador {
         width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, transparent, #13310b55, transparent);
     }
-
+    .login-box,
+    .register-box {
+        padding: 2.5rem 2rem;
+    }
 }
+
+/* =========================================== zona sesion ========================================== */
+
+
 
 
 /* =========================================== zona index ========================================== */
@@ -821,8 +872,8 @@ main {
 
 .footer {
     background: var(--hefoo);
-    padding: 3rem 8% 1.5rem;
-    margin-top: 4rem;
+    padding: 1.5rem 8% 1rem;
+    margin-top: 2rem;
 }
 
 .footer_contenido {
@@ -832,7 +883,7 @@ main {
     gap: 2rem;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .footer_col {
@@ -843,7 +894,7 @@ main {
 }
 
 .footer_titulo {
-    font-size: 11px;
+    font-size: 15px;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     color: #7ee8a2;
@@ -852,17 +903,18 @@ main {
 }
 
 .footer_cositas {
-    font-size: 11px;
+    font-size: 14px;
     color: rgba(255,255,255,0.5);
     letter-spacing: 0.5px;
     margin-top: 0.4rem;
 }
 
 .footer_link {
-    font-size: 13px;
+    font-size: 22px;
     color: rgba(255,255,255,0.8);
     text-decoration: none;
     transition: color 0.2s;
+    padding-bottom: 14px;
 }
 
 .footer_link:hover {
@@ -870,7 +922,7 @@ main {
 }
 
 .footer_texto {
-    font-size: 13px;
+    font-size: 16px;
     color: rgba(255,255,255,0.8);
 }
 
@@ -886,9 +938,17 @@ main {
     margin-top: 0.25rem;
 }
 
+.footer_label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: 0.4rem;
+}
+
 .footer_red {
-    width: 38px;
-    height: 38px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     border: 1px solid rgba(126,232,162,0.35);
     display: flex;
@@ -896,7 +956,7 @@ main {
     justify-content: center;
     color: rgba(255,255,255,0.8);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     transition: border-color 0.2s, color 0.2s;
 }
 
@@ -907,17 +967,16 @@ main {
 
 .footer_copy {
     border-top: 1px solid rgba(126,232,162,0.15);
-    padding-top: 1.25rem;
+    padding-top: 0.75rem;
     text-align: center;
 }
 
 .footer_copy p {
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: rgba(255,255,255,0.4);
 }
-
 /* =========================================== zona footer ========================================== */
 
 /* =========================================== RESPONSIVE MÓVIL ========================================== */
@@ -934,12 +993,10 @@ main {
     .logo_img {
         width: 110px;
         height: 60px;
-        margin-left: 0;
     }
 
     .logo-subtitle {
         font-size: 13px;
-        margin-left: 0;
         letter-spacing: 1.5px;
     }
 
@@ -989,7 +1046,11 @@ main {
         font-size: 1.2rem;
     }
 
-    /* Nosotros - cards */
+
+    
+
+    
+    /* Nosotros */
     .seccion_equipo {
         padding: 2.5rem 5%;
     }
@@ -998,18 +1059,24 @@ main {
         font-size: 28px;
     }
 
+    .leyenda {
+        font-size: 13px;
+        margin-bottom: 2rem;
+    }
+
     .glass_card {
         flex-direction: column;
-        padding: 1.5rem;
-        gap: 1rem;
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
     }
 
     .card_left {
-        width: 100%;
         flex-direction: row;
-        margin: -1.5rem -1.5rem 0;
-        padding: 1rem 1.5rem;
-        border-radius: 14px 14px 0 0;
+        width: 100%;
+        margin: 0;
+        border-radius: 16px 16px 0 0;
+        padding: 1.25rem 1.5rem;
         align-self: auto;
         gap: 1rem;
         justify-content: flex-start;
@@ -1019,18 +1086,34 @@ main {
         width: 70px;
         height: 70px;
         padding: 6px;
+        flex-shrink: 0;
     }
 
     .avatar_miembro {
         font-size: 20px;
     }
 
+    .Nombre_equipo,
+    .Rol_equipo {
+        text-align: left;
+    }
+
     .card_separator {
         display: none;
     }
 
+    .card_right {
+        padding: 1.25rem 1.5rem 1.5rem;
+        gap: 0.75rem;
+    }
+
     .Bio_equipo {
         font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .info_item {
+        font-size: 11px;
     }
 
     /* Contacto */
